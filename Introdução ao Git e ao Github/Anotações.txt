@@ -1,0 +1,63 @@
+COMANDOS GIT & GITHUB
+Objetos ->
+BLOBS: Objeto básico de composição (contém meta-dados)
+TREES: Armazena os blobs ou outras árvores (contém meta-dados)
+COMMITS:
+
+Ctrl + L -> é o mesmo de cls no git bash para limpar a tela
+Ls -a -> para ver a pasta oculta 
+Ls -> lista o que tem na pasta
+*Configurando o nome no GIT ->  git config --global user.name “Marcelo Paiva”.
+*Configurando o email no GIT ->  git config --global user.email “marcelochagas.paiva@yahoo.com.br”.
+*Configurando o editor de código no GIT ->  git config --global core.editor “VS code”.
+
+*Lendo o que está configurado no GIT ->  git config (user.name / user.email). Ou ler tudo de uma ez no GIT -> git config --list.
+
+
+*Criando um repositório -> git init (Obs: Na pasta do projeto).
+
+*Branch -> São versões diferentes do meu sistema. 
+*Branch Master -> é a versão principal do meu sistema.
+*Commit -> Quando faz alteração no meu sistema e envio para o GIT. (Obs:Sempre comentar a alteração que foi feita no sistema).
+*Readme -> O arquivo principal do sistema para o GIT, fora o sistema. (Ele é criado como README.md)
+_______________________________________________________________
+*git add -A -> Para trackear (o GIT monitora mudanças nos arquivos) todos os arquivos da pasta.
+*git add * -> Para mover para o Stage tudo o que precisa ser commitado
+*git status -> Verifica se os arquivos da pasta foram alterados e se estão trackeados.
+*git commit -m “mensagem” -> salva as alterações feitas no GIT.
+* git commit -am “mensagem” -> Para trackear e commitar direto sem o:   git add -A.
+*git log -> Para ver a lista de todos os commits no branch.
+*git branch -> Lista todos os branch do Projeto e mostra em qual branch estou no projeto.
+*git reset --soft (mais o id do commit que quer voltar) -> Volta o arquivo para o commit preparado para fazer o commit sem apagar o que foi feito.
+*git reset --mixed (mais o id do commit que quer voltar) -> Volta o arquivo para o commit, mas não preparado para commitar, precisará dar o: git add    -A.
+*git reset --hard (mais o id do commit que quer voltar) -> Volta o arquivo para o commit, mas apagando todos os commits que foram feitos depois dele.
+*git revert --no-edit (mais o código do commit que irá voltar) -> Volta commitando sem apagar o commit que você quer voltar para corrigir alguma coisa, sem abrir o editor de códigos.
+
+
+*git branch (mais o nome do novo branch) -> Para criar um novo branch.
+*git checkout (mais o nome do branch que irá usar) -> Para trocar de branch.
+*git diff -> Detalha as alterações que foram feitas no branch.
+*git diff --name-only -> Mostra o nome dos arquivos que foram modificados no branch.
+*git diff (mais o nome do arquivo) -> Detalha as alterações que foram feitas somente no arquivo selecionado.
+*git checkout -> Para voltar para alguma outra versão, quer seja um branch, um commit específico ou de um arquivo específico.
+
+
+*git remote add origin (mais a url) -> Adiciona a versão remota no github.
+*git remote -> Ver se foi criada a versão remota.
+*git remote -v -> Ver detalhes do que foi criada a versão remota.
+(fetch) -> Capacidade de trazer o projeto remoto para o local.
+(push) -> Capacidade de levar o projeto local para o remoto.
+*git push -u origin(local remoto) master(branch) -> Para enviar o projeto para o local remoto.
+*git push origin master(branch) -> Para enviar atualizações feitas no projeto local.
+
+
+*.gitignore -> É um arquivo que dentro dele fica o que será ignorado no projeto local e remoto.
+*Para ocultar tudo dentro do .gitignore -> *.sql (Banco de dados) / *.txt (Arquivos em texto) / pasta/* (Para incluir um diretório inteiro ou pasta).
+Ou selecionar apenas um arquivo: banco.sql (É só digitar o nome do arquivo dentro do ignore.
+*git remote remove origin -> Para remover o Sistema remoto.
+*git push origin :teste -> No caso aqui, os dois pontos são para deletar o branch remoto teste. Para deletar algo remoto só utilizar os dois pontos (:).
+*git branch -D (nome do branch) -> Para deletar um branch local.
+*git pull origin master(branch) -> Para trazer as alterações remotas para o projeto local.
+*git clone (mais a url do git) -> Para clonar um projeto inteiro do github para o projeto local.
+
+*mv -> Para mover o que está na pasta.
